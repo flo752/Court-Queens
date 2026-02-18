@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padel Watch</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #ff2e93, #ff6ec7);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1c1c1c;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #ff2e93;
+}
+
+.section {
+    display: none;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.active {
+    display: block;
+}
+
+.card {
+    background: #1f1f1f;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 400px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: #ff2e93;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1c1c;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>PADEL WATCH 🎾</h1>
+    <p>Where girls dominate the court</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('players')">Players</button>
+    <button onclick="showSection('rankings')">Rankings</button>
+    <button onclick="showSection('matches')">Matches</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+    <h2>Welcome to Padel Watch</h2>
+    <p>Your go-to site for girls padel news, players & rankings.</p>
+</div>
+
+<!-- PLAYERS -->
+<div id="players" class="section">
+    <h2>Top Players</h2>
+
+    <div class="card">
+        <h3>Isabella Cruz</h3>
+        <p>Age: 17</p>
+        <p>Country: Spain</p>
+    </div>
+
+    <div class="card">
+        <h3>Chloe Bennett</h3>
+        <p>Age: 16</p>
+        <p>Country: UK</p>
+    </div>
+
+    <div class="card">
+        <h3>Sofia Martinez</h3>
+        <p>Age: 18</p>
+        <p>Country: Argentina</p>
+    </div>
+</div>
+
+<!-- RANKINGS -->
+<div id="rankings" class="section">
+    <h2>Top 5 Rankings</h2>
+
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Isabella Cruz</td>
+            <td>980</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Chloe Bennett</td>
+            <td>920</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sofia Martinez</td>
+            <td>890</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Amara Khan</td>
+            <td>850</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Luna Rossi</td>
+            <td>810</td>
+        </tr>
+    </table>
+</div>
+
+<!-- MATCHES -->
+<div id="matches" class="section">
+    <h2>Latest Matches</h2>
+
+    <div class="card">
+        <p><strong>Isabella Cruz</strong> defeated Chloe Bennett</p>
+        <p>6-4, 6-3</p>
+    </div>
+
+    <div class="card">
+        <p><strong>Sofia Martinez</strong> defeated Amara Khan</p>
+        <p>7-5, 6-2</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 Padel Watch | Built for sporty girls 🎾
+</footer>
+
+<script>
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
